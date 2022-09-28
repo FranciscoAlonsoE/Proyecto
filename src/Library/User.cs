@@ -12,9 +12,11 @@ public abstract class User{
         this.name=name;
         this.phoneNum=phoneNum;
         this.address=address;
+          this.reviewList = new List<Review>();
     }
-    public static void Review() {
-        Review = new List<Review>();
+       public static void MakeOffer(Offer Offer){
+        Offer offer = Offer;
+        
     }
 
     public void MakeReview(Employer employer){
