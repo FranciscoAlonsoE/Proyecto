@@ -8,3 +8,5 @@ public class Review{
         this.stars = MyStars;
         this.comment = MyComment;
     }
+
+}
