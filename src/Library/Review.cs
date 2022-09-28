@@ -1,4 +1,4 @@
-namespace library;
+namespace Library;
 
 public class Review{
     private int stars {get; set;}
