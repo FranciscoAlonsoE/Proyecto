@@ -6,8 +6,8 @@ public class Worker : User {
     : base(name, phoneNum, address)
     {    
     }
-    public static void MakeOffer(Offer Offer){
-        Offer offer = Offer;
+    public static void MakeOffer(string category, int price, int description){
+       
         
     }
 }
