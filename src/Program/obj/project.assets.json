@@ -1,26 +1,45 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "Library/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Library.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Library.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Library/1.0.0": {
+      "type": "project",
+      "path": "../Library/Library.csproj",
+      "msbuildProject": "../Library/Library.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Library >= 1.0.0"
+    ]
   },
   "packageFolders": {
-    "C:\\Users\\Fran\\.nuget\\packages\\": {}
+    "/Users/nicolas/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Fran\\P2\\EjerciciosEquipo\\Proyecto\\src\\Program\\Program.csproj",
+      "projectUniqueName": "/Users/nicolas/Documents/Facultad/p2/Proyecto/src/Program/Program.csproj",
       "projectName": "Program",
-      "projectPath": "C:\\Users\\Fran\\P2\\EjerciciosEquipo\\Proyecto\\src\\Program\\Program.csproj",
-      "packagesPath": "C:\\Users\\Fran\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Fran\\P2\\EjerciciosEquipo\\Proyecto\\src\\Program\\obj\\",
+      "projectPath": "/Users/nicolas/Documents/Facultad/p2/Proyecto/src/Program/Program.csproj",
+      "packagesPath": "/Users/nicolas/.nuget/packages/",
+      "outputPath": "/Users/nicolas/Documents/Facultad/p2/Proyecto/src/Program/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Fran\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/nicolas/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -31,7 +50,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/nicolas/Documents/Facultad/p2/Proyecto/src/Library/Library.csproj": {
+              "projectPath": "/Users/nicolas/Documents/Facultad/p2/Proyecto/src/Library/Library.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -58,7 +81,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.302/RuntimeIdentifierGraph.json"
       }
     }
   }
