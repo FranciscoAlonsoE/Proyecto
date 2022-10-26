@@ -6,6 +6,7 @@ public abstract class User{
     private string name {get; set;}
     private string phoneNum {get; set;}
     private string address {get; set;}
+    private int id;
     private List<Review> reviewList {get; set;}
 
     public User(string name, string phoneNum, string address){
@@ -21,6 +22,10 @@ public abstract class User{
 
     public void MakeReview(Employer employer){
 
+    }
+
+    public int getId(){
+        return this.id;
     }
 
     public int getReputation(){
