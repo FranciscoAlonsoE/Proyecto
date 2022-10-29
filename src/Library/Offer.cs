@@ -1,23 +1,22 @@
 namespace Library{
     public class Offer
     {
-        public string category {get; set;}
-        public double price {get; set;}
-        public string description {get; set;}
-        public Worker worker {get;set;}
-        // private int id;
-        
-
-        // public int getId(){
-        //      return this.id;
-        //      }
-        public Offer(string category, double price, string description, Worker worker)
+        public Offer(int id, Category category, double price, string description, Worker worker)
         {
-            this.category=category;
-            this.price=price;
-            this.description=description;
-            this.worker=worker;
-            //this.id=Id;
+            this.id = id;
+            this.category = category;
+            this.price = price;
+            this.description = description;
+            this.worker = worker;
+            string status = "Open";
         }
+
+        public int id {get;}
+        public Category category {get;}
+        public double price {get;}
+        public string description {get;}
+        public Worker worker {get;}
+        public string status {get; set;}
+
     }
 }
