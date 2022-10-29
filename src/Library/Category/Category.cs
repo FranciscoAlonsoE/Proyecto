@@ -4,8 +4,6 @@ namespace Library;
 /// This class is repsonsible for the categories responsability.
 /// </summary>
 public class Category{
-
-  
     private string name;
     private int id;
 
