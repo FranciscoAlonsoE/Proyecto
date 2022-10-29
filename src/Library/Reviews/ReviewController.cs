@@ -12,16 +12,13 @@ public class ReviewController{
         return s;
     }
 
-    public void MakeReview(Worker from, Employer to, int stars, string comment){
+    public void MakeReview(User from, User to, int stars, string comment){
 
-        Review newReview = new Review(from, to, stars, comment);
-        this.reviewList.Add(newReview);
-    }
-
-    public void MakeReview(Employer from, Worker to, int stars, string comment){
-
-        Review newReview = new Review(from, to, stars, comment);
-        this.reviewList.Add(newReview);
+        if (from.GetType() != to.GetType())
+        {
+            Review newReview = new Review(from, to, stars, comment);
+            this.reviewList.Add(newReview);
+        }
     }
 
     public void RemoveReview(int id){
