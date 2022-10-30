@@ -3,7 +3,15 @@ namespace Library;
 /// Clase ReviewController encargada de almacenar las reviews, eliminarlas y filtrarlas.
 /// </summary>
 public class ReviewController{
-    public static ReviewController s;    
+    /// <summary>
+    /// Instancia unica del ReviewController.
+    /// </summary>
+    public static ReviewController s;
+    /// <summary>
+    /// Lista con todas las reviews existentes.
+    /// </summary>
+    /// <typeparam name="Review"> Objeto Review almacenado en la lista. </typeparam>
+    /// <returns></returns>   
     private List<Review> reviewList {get; set;} = new List<Review>();
 
     /// <summary>
