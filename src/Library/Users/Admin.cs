@@ -1,38 +1,50 @@
 using System;
 namespace Library;
 
-public class Admin 
+
+/// <summary>
+/// clase admin, para crear usuario a un administrador
+/// </summary>
+public class Admin : User 
  {
-    public static Admin s;
-    private Admin (){}
-    public static Admin AdminGetInstance(){
-        if (s==null){
-            s = new Admin();
-        }
-        return s;
 
+    /// <summary>
+    /// crea un admin
+    /// </summary>
+    /// <param name="name">nombre del admin</param>
+    /// <param name="phoneNum">numero del admin</param>
+    /// <param name="address">correo del admin</param>
+    /// <param name="Id">id del admin</param>
+    public Admin(string name, string phoneNum, string address, int Id) 
+     : base(name, phoneNum, address, Id)
+      {}
+
+/// <summary>
+/// agrega un usuario
+/// </summary>
+/// <param name="name">nombre del usuario</param>
+/// <param name="phoneNum">numero del usuario</param>
+/// <param name="address">correo del usuario</param>
+    public void AddUser(string name, string phoneNum, string address){
+        UserController.GetInstance().Register(name, phoneNum, address);     
     }
 
-    
 
 
-    //private List<Offer> offerList {get; set;} = new List<Offer>();
-    private List<User> userList {get; set;}= new List<User>();
-    
-    
-
-    
-
-    public void AddUser(User newUser){
-        this.userList.Add(newUser);
+/// <summary>
+/// remueve el usuario
+/// </summary>
+/// <param name="Id">id del usuario a eliminar</param>
+    public void RemoveUser(int Id){
+        UserController.GetInstance().RemoveUser(Id);
     }
 
-    public void RemoveUser(Offer myOffer){
 
-    }
-
+/// <summary>
+/// Metodo a desarrollar mas adelante
+/// </summary>
     public void Match(){
-
+        
     }
 
  }
