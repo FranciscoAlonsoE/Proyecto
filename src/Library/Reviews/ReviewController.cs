@@ -45,10 +45,12 @@ public class ReviewController{
     /// <param name="id"> ID de la review que se quiere eliminar. </param>
     public void RemoveReview(int id){
 
-        foreach (var review in this.reviewList)
+
+        foreach (Review review in this.reviewList)
         {
             if(review.id == id){
                 this.reviewList.Remove(review);
+                break;
             }
         }
     }
@@ -69,7 +71,7 @@ public class ReviewController{
 
         List<Review> result = new List<Review>();
 
-        foreach (var review in this.reviewList)
+        foreach (Review review in this.reviewList)
         {
             if(review.from == user){
                 result.Add(review);
@@ -87,7 +89,7 @@ public class ReviewController{
 
         List<Review> result = new List<Review>();
 
-        foreach (var review in this.reviewList)
+        foreach (Review review in this.reviewList)
         {
             if(review.to == user){
                 result.Add(review);
