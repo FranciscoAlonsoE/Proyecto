@@ -1,35 +1,49 @@
 namespace Library;
 
-public abstract class User{
+/// <summary>
+/// clase para crear los usuarios
+/// </summary>
+public class User{
 
-  
-    private string name {get; set;}
-    private string phoneNum {get; set;}
-    private string address {get; set;}
-    private int id;
-    private List<Review> reviewList {get; set;}
-
-    public User(string name, string phoneNum, string address){
+   
+    public string name {get; set;}
+    public string phoneNum {get; set;}
+    public string address {get; set;}
+    public int id;
+    public List<Review> reviewList {get; set;}
+/// <summary>
+/// Crea un usuario
+/// </summary>
+/// <param name="name">nombre del usuario</param>
+/// <param name="phoneNum">numero del usuario</param>
+/// <param name="address">email del usuario</param>
+/// <param name="Id">id del usuario</param>    
+    public User(string name, string phoneNum, string address, int Id){
         this.name=name;
         this.phoneNum=phoneNum;
         this.address=address;
-          this.reviewList = new List<Review>();
+        this.id=Id;
+        this.reviewList = new List<Review>();
     }
-       public static void MakeOffer(Offer Offer){
-        Offer offer = Offer;
-        
-    }
-
-    public void MakeReview(Employer employer){
-
-    }
-
+    /// <summary>
+    /// retorna el id del usuario
+    /// </summary>
+    /// <returns></returns>
     public int getId(){
         return this.id;
     }
-
+/// <summary>
+/// retorna la reputacion del usuario
+/// </summary>
+/// <returns></returns>
     public int getReputation(){
         int rep = 0;
+
+        ReviewController R = ReviewController.GetInstance();
+        foreach(Review B in R.FilterByRatedUser(this)){
+            rep = rep + B.stars;
+        }
+        rep=rep / R.FilterByRatedUser(this).Count() ;
         
         return rep;
     }

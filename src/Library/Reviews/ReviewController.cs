@@ -1,10 +1,28 @@
 namespace Library;
-
+/// <summary>
+/// Clase ReviewController encargada de almacenar las reviews, eliminarlas y filtrarlas.
+/// </summary>
 public class ReviewController{
-    public static ReviewController s;    
+    /// <summary>
+    /// Instancia unica del ReviewController.
+    /// </summary>
+    public static ReviewController s;
+    /// <summary>
+    /// Lista con todas las reviews existentes.
+    /// </summary>
+    /// <typeparam name="Review"> Objeto Review almacenado en la lista. </typeparam>
+    /// <returns></returns>   
     private List<Review> reviewList {get; set;} = new List<Review>();
+
+    /// <summary>
+    /// Constructor privado del Review Controller.
+    /// </summary>
     private ReviewController(){}
     
+    /// <summary>
+    /// Asegura que se cree una sola instancia de ReviewController.
+    /// </summary>
+    /// <returns> Instancia única de ReviewController. </returns>
     public static ReviewController GetInstance(){
         if (s == null){
             s = new ReviewController();
@@ -12,37 +30,56 @@ public class ReviewController{
         return s;
     }
 
-    public void MakeReview(Worker from, Employer to, int stars, string comment){
+    /// <summary>
+    /// Crear una review.
+    /// </summary>
+    /// <param name="from"> Usuario que hace la review. </param>
+    /// <param name="to"> Usuario calificado en la review. </param>
+    /// <param name="stars"> Estrellas dadas al usuario. </param>
+    /// <param name="comment"> Comentario de la review. </param>
 
-        Review newReview = new Review(from, to, stars, comment);
-        this.reviewList.Add(newReview);
-    }
+    public void MakeReview(User from, User to, int stars, string comment){
 
-    public void MakeReview(Employer from, Worker to, int stars, string comment){
-
-        Review newReview = new Review(from, to, stars, comment);
-        this.reviewList.Add(newReview);
-    }
-
-    public void RemoveReview(int id){
-
-        foreach (var review in this.reviewList)
+        if (from.GetType() != to.GetType())
         {
-            if(review.id == id){
-                this.reviewList.Remove(review);
-            }
+            Review newReview = new Review(from, to, stars, comment);
+            this.reviewList.Add(newReview);
         }
     }
 
+    /// <summary>
+    /// Remover una review por ID.
+    /// </summary>
+    /// <param name="id"> ID de la review que se quiere eliminar. </param>
+    public void RemoveReview(int id){
+
+
+        foreach (Review review in this.reviewList)
+        {
+            if(review.id == id){
+                this.reviewList.Remove(review);
+                break;
+            }
+        }
+    }
+    /// <summary>
+    /// Accede a la lista de reviews.
+    /// </summary>
+    /// <returns> Lista de todas las reviews almacenadas </returns>
     public List<Review> ReviewList(){
         return this.reviewList;
     }
 
+    /// <summary>
+    /// Filtar las revies en base al usuario que las hizo.
+    /// </summary>
+    /// <param name="user"> Usuario que hizo las reviews. </param>
+    /// <returns> Lista con las reviews hechas por el usuario. </returns>
     public List<Review> FilterByPlublisher(User user){
 
         List<Review> result = new List<Review>();
 
-        foreach (var review in this.reviewList)
+        foreach (Review review in this.reviewList)
         {
             if(review.from == user){
                 result.Add(review);
@@ -51,11 +88,16 @@ public class ReviewController{
         return result;
     }
 
+    /// <summary>
+    /// Filtra las reviews en base al usuario calificado.
+    /// </summary>
+    /// <param name="user"> Usuario calificado en las reviews. </param>
+    /// <returns> Lista de reviews hechas para el usuario. </returns>
     public List<Review> FilterByRatedUser(User user){
 
         List<Review> result = new List<Review>();
 
-        foreach (var review in this.reviewList)
+        foreach (Review review in this.reviewList)
         {
             if(review.to == user){
                 result.Add(review);
