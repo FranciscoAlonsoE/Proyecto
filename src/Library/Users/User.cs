@@ -10,7 +10,7 @@ public class User{
     public string phoneNum {get; set;}
     public string address {get; set;}
     public int id;
-    public List<Review> reviewList {get; set;}
+    //public List<Review> reviewList {get; set;}
 /// <summary>
 /// Crea un usuario
 /// </summary>
@@ -23,7 +23,7 @@ public class User{
         this.phoneNum=phoneNum;
         this.address=address;
         this.id=Id;
-        this.reviewList = new List<Review>();
+        //this.reviewList = new List<Review>();
     }
     /// <summary>
     /// retorna el id del usuario
