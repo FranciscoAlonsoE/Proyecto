@@ -4,7 +4,7 @@ public class Work{
 
   
     private Offer offer;
-    private Worker worker;
+    private Employer employer;
     private DateTime date;
     private int id;
 
@@ -16,17 +16,17 @@ public class Work{
         return this.offer;
     }
 
-    public Worker getWorker(){
-        return this.worker;
+    public Employer GetEmployer(){
+        return this.employer;
     }
 
     public DateTime getDate(){
         return this.date;
     }
 
-    public Work(Offer offer, Worker worker, int id){
+    public Work(Offer offer, Employer employer, int id){
         this.offer = offer;
-        this.worker = worker;
+        this.employer = employer;
         this.date = DateTime.Now;
         this.id = id;
     }
