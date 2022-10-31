@@ -1,0 +1,268 @@
+\hypertarget{class_library_1_1_offer_controller}{}\doxysection{Library.\+Offer\+Controller Class Reference}
+\label{class_library_1_1_offer_controller}\index{Library.OfferController@{Library.OfferController}}
+
+
+Clase de servicio que maneja las ofertas  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_library_1_1_offer_controller_a98f2cc546cf1d2d75f64057fd63202e0}{Add\+Offer}} (\mbox{\hyperlink{class_category}{Category}} category, double price, string description, \mbox{\hyperlink{class_library_1_1_worker}{Worker}} maker)
+\begin{DoxyCompactList}\small\item\em Responsable de crear ofertas y añadirlas a la lista global \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_library_1_1_offer_controller_ac421df5b07ee77655e503b5d39d8ec50}{Remove\+Offer}} (int offer\+Id)
+\begin{DoxyCompactList}\small\item\em Remueve una oferta de la lista global \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_library_1_1_offer}{Offer}} \mbox{\hyperlink{class_library_1_1_offer_controller_a2af06399538bc24e35d4d32ed768b5cb}{Get\+Offer}} (int offer\+Id)
+\begin{DoxyCompactList}\small\item\em Método para acceder a una oferta según su id \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_library_1_1_offer_controller_ac5e20e0f952973464548b9897e188155}{Open\+Offer}} (int offer\+Id)
+\begin{DoxyCompactList}\small\item\em Cambia el estado de una oferta a \char`\"{}abierta\char`\"{} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_library_1_1_offer_controller_a37017540eac8268477288e3ed1d6da3d}{Progress\+Offer}} (int offer\+Id)
+\begin{DoxyCompactList}\small\item\em Cambia el estado de una oferta a \char`\"{}en progreso\char`\"{} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_library_1_1_offer_controller_a356854757dfbffb3f4f34e938c50a3f1}{Close\+Offer}} (int offer\+Id)
+\begin{DoxyCompactList}\small\item\em Cambia el estado de una oferta a \char`\"{}cerrada\char`\"{} \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_library_1_1_offer}{Offer}} $>$ \mbox{\hyperlink{class_library_1_1_offer_controller_a7795ddbb3f125730a7aa92f4904d4363}{Get\+All\+Offers}} ()
+\begin{DoxyCompactList}\small\item\em Método para acceder a la lista global de ofertas \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_library_1_1_offer}{Offer}} $>$ \mbox{\hyperlink{class_library_1_1_offer_controller_a40442f47010eef7a3b0cb1eeccd8b377}{Sort\+By\+Category}} (\mbox{\hyperlink{class_category}{Category}} category)
+\begin{DoxyCompactList}\small\item\em Filtra ofertas segun categoría \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_library_1_1_offer}{Offer}} $>$ \mbox{\hyperlink{class_library_1_1_offer_controller_ac8d7996f886b3608b628dca139791405}{Sort\+By\+Worker}} (\mbox{\hyperlink{class_library_1_1_worker}{Worker}} worker)
+\begin{DoxyCompactList}\small\item\em Filtra ofertas segun su autor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_library_1_1_offer_controller}{Offer\+Controller}} \mbox{\hyperlink{class_library_1_1_offer_controller_aadb3c843e038adf91aab4cb375c309b8}{Get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Método para poder usar el patrón de Singleton y acceder a la instancia de \mbox{\hyperlink{class_library_1_1_offer_controller}{Offer\+Controller}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_library_1_1_offer_controller}{Offer\+Controller}} \mbox{\hyperlink{class_library_1_1_offer_controller_a63788db7d4b1d44b4b67b0eb6880de1d}{s}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_library_1_1_offer_controller_afba76a6047113b0b11f01f357764c8c5}{Offer\+Controller}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_library_1_1_offer}{Offer}} $>$ \mbox{\hyperlink{class_library_1_1_offer_controller_a49e17abe8b1524dbdc4d15e44409ea0e}{all\+Offers}} = new List$<$\mbox{\hyperlink{class_library_1_1_offer}{Offer}}$>$()
+\begin{DoxyCompactList}\small\item\em Lista que contiene todas las ofertas creadas \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_library_1_1_offer_controller_a5b7ac4f1338a805836034a42e166f18e}{id\+Counter}} = 1
+\begin{DoxyCompactList}\small\item\em Contador para asignarles un ID a las ofertas \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase de servicio que maneja las ofertas 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_library_1_1_offer_controller_afba76a6047113b0b11f01f357764c8c5}\label{class_library_1_1_offer_controller_afba76a6047113b0b11f01f357764c8c5}} 
+\index{Library.OfferController@{Library.OfferController}!OfferController@{OfferController}}
+\index{OfferController@{OfferController}!Library.OfferController@{Library.OfferController}}
+\doxysubsubsection{\texorpdfstring{OfferController()}{OfferController()}}
+{\footnotesize\ttfamily Library.\+Offer\+Controller.\+Offer\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_library_1_1_offer_controller_a98f2cc546cf1d2d75f64057fd63202e0}\label{class_library_1_1_offer_controller_a98f2cc546cf1d2d75f64057fd63202e0}} 
+\index{Library.OfferController@{Library.OfferController}!AddOffer@{AddOffer}}
+\index{AddOffer@{AddOffer}!Library.OfferController@{Library.OfferController}}
+\doxysubsubsection{\texorpdfstring{AddOffer()}{AddOffer()}}
+{\footnotesize\ttfamily void Library.\+Offer\+Controller.\+Add\+Offer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_category}{Category}}}]{category,  }\item[{double}]{price,  }\item[{string}]{description,  }\item[{\mbox{\hyperlink{class_library_1_1_worker}{Worker}}}]{maker }\end{DoxyParamCaption})}
+
+
+
+Responsable de crear ofertas y añadirlas a la lista global 
+
+
+\begin{DoxyParams}{Parameters}
+{\em category} & Categoría a la que pertenece la oferta\\
+\hline
+{\em price} & Precio para contratar este servicio\\
+\hline
+{\em description} & Descripción de la oferta\\
+\hline
+{\em maker} & Autor de la oferta\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_library_1_1_offer_controller_a356854757dfbffb3f4f34e938c50a3f1}\label{class_library_1_1_offer_controller_a356854757dfbffb3f4f34e938c50a3f1}} 
+\index{Library.OfferController@{Library.OfferController}!CloseOffer@{CloseOffer}}
+\index{CloseOffer@{CloseOffer}!Library.OfferController@{Library.OfferController}}
+\doxysubsubsection{\texorpdfstring{CloseOffer()}{CloseOffer()}}
+{\footnotesize\ttfamily void Library.\+Offer\+Controller.\+Close\+Offer (\begin{DoxyParamCaption}\item[{int}]{offer\+Id }\end{DoxyParamCaption})}
+
+
+
+Cambia el estado de una oferta a \char`\"{}cerrada\char`\"{} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offer\+Id} & Valor numérico identificador de la oferta\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_library_1_1_offer_controller_a7795ddbb3f125730a7aa92f4904d4363}\label{class_library_1_1_offer_controller_a7795ddbb3f125730a7aa92f4904d4363}} 
+\index{Library.OfferController@{Library.OfferController}!GetAllOffers@{GetAllOffers}}
+\index{GetAllOffers@{GetAllOffers}!Library.OfferController@{Library.OfferController}}
+\doxysubsubsection{\texorpdfstring{GetAllOffers()}{GetAllOffers()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_library_1_1_offer}{Offer}} $>$ Library.\+Offer\+Controller.\+Get\+All\+Offers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Método para acceder a la lista global de ofertas 
+
+\begin{DoxyReturn}{Returns}
+Lista de ofertas
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_library_1_1_offer_controller_aadb3c843e038adf91aab4cb375c309b8}\label{class_library_1_1_offer_controller_aadb3c843e038adf91aab4cb375c309b8}} 
+\index{Library.OfferController@{Library.OfferController}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!Library.OfferController@{Library.OfferController}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_library_1_1_offer_controller}{Offer\+Controller}} Library.\+Offer\+Controller.\+Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Método para poder usar el patrón de Singleton y acceder a la instancia de \mbox{\hyperlink{class_library_1_1_offer_controller}{Offer\+Controller}} 
+
+\begin{DoxyReturn}{Returns}
+Instancia de \mbox{\hyperlink{class_library_1_1_offer_controller}{Offer\+Controller}}
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_library_1_1_offer_controller_a2af06399538bc24e35d4d32ed768b5cb}\label{class_library_1_1_offer_controller_a2af06399538bc24e35d4d32ed768b5cb}} 
+\index{Library.OfferController@{Library.OfferController}!GetOffer@{GetOffer}}
+\index{GetOffer@{GetOffer}!Library.OfferController@{Library.OfferController}}
+\doxysubsubsection{\texorpdfstring{GetOffer()}{GetOffer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_library_1_1_offer}{Offer}} Library.\+Offer\+Controller.\+Get\+Offer (\begin{DoxyParamCaption}\item[{int}]{offer\+Id }\end{DoxyParamCaption})}
+
+
+
+Método para acceder a una oferta según su id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offer\+Id} & Valor numérico de id de la oferta\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Oferta deseada u oferta nula
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_library_1_1_offer_controller_ac5e20e0f952973464548b9897e188155}\label{class_library_1_1_offer_controller_ac5e20e0f952973464548b9897e188155}} 
+\index{Library.OfferController@{Library.OfferController}!OpenOffer@{OpenOffer}}
+\index{OpenOffer@{OpenOffer}!Library.OfferController@{Library.OfferController}}
+\doxysubsubsection{\texorpdfstring{OpenOffer()}{OpenOffer()}}
+{\footnotesize\ttfamily void Library.\+Offer\+Controller.\+Open\+Offer (\begin{DoxyParamCaption}\item[{int}]{offer\+Id }\end{DoxyParamCaption})}
+
+
+
+Cambia el estado de una oferta a \char`\"{}abierta\char`\"{} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offer\+Id} & Valor numérico identificador de la oferta\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_library_1_1_offer_controller_a37017540eac8268477288e3ed1d6da3d}\label{class_library_1_1_offer_controller_a37017540eac8268477288e3ed1d6da3d}} 
+\index{Library.OfferController@{Library.OfferController}!ProgressOffer@{ProgressOffer}}
+\index{ProgressOffer@{ProgressOffer}!Library.OfferController@{Library.OfferController}}
+\doxysubsubsection{\texorpdfstring{ProgressOffer()}{ProgressOffer()}}
+{\footnotesize\ttfamily void Library.\+Offer\+Controller.\+Progress\+Offer (\begin{DoxyParamCaption}\item[{int}]{offer\+Id }\end{DoxyParamCaption})}
+
+
+
+Cambia el estado de una oferta a \char`\"{}en progreso\char`\"{} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offer\+Id} & Valor numérico identificador de la oferta\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_library_1_1_offer_controller_ac421df5b07ee77655e503b5d39d8ec50}\label{class_library_1_1_offer_controller_ac421df5b07ee77655e503b5d39d8ec50}} 
+\index{Library.OfferController@{Library.OfferController}!RemoveOffer@{RemoveOffer}}
+\index{RemoveOffer@{RemoveOffer}!Library.OfferController@{Library.OfferController}}
+\doxysubsubsection{\texorpdfstring{RemoveOffer()}{RemoveOffer()}}
+{\footnotesize\ttfamily void Library.\+Offer\+Controller.\+Remove\+Offer (\begin{DoxyParamCaption}\item[{int}]{offer\+Id }\end{DoxyParamCaption})}
+
+
+
+Remueve una oferta de la lista global 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offer\+Id} & Valor numérico identificador de la oferta\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_library_1_1_offer_controller_a40442f47010eef7a3b0cb1eeccd8b377}\label{class_library_1_1_offer_controller_a40442f47010eef7a3b0cb1eeccd8b377}} 
+\index{Library.OfferController@{Library.OfferController}!SortByCategory@{SortByCategory}}
+\index{SortByCategory@{SortByCategory}!Library.OfferController@{Library.OfferController}}
+\doxysubsubsection{\texorpdfstring{SortByCategory()}{SortByCategory()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_library_1_1_offer}{Offer}} $>$ Library.\+Offer\+Controller.\+Sort\+By\+Category (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_category}{Category}}}]{category }\end{DoxyParamCaption})}
+
+
+
+Filtra ofertas segun categoría 
+
+
+\begin{DoxyParams}{Parameters}
+{\em category} & Categoría para filtrar\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lista de ofertas ya filtrada
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_library_1_1_offer_controller_ac8d7996f886b3608b628dca139791405}\label{class_library_1_1_offer_controller_ac8d7996f886b3608b628dca139791405}} 
+\index{Library.OfferController@{Library.OfferController}!SortByWorker@{SortByWorker}}
+\index{SortByWorker@{SortByWorker}!Library.OfferController@{Library.OfferController}}
+\doxysubsubsection{\texorpdfstring{SortByWorker()}{SortByWorker()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_library_1_1_offer}{Offer}} $>$ Library.\+Offer\+Controller.\+Sort\+By\+Worker (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_library_1_1_worker}{Worker}}}]{worker }\end{DoxyParamCaption})}
+
+
+
+Filtra ofertas segun su autor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em worker} & Trabajador por el cual filtrar\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lista de ofertas ya filtrada
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_library_1_1_offer_controller_a49e17abe8b1524dbdc4d15e44409ea0e}\label{class_library_1_1_offer_controller_a49e17abe8b1524dbdc4d15e44409ea0e}} 
+\index{Library.OfferController@{Library.OfferController}!allOffers@{allOffers}}
+\index{allOffers@{allOffers}!Library.OfferController@{Library.OfferController}}
+\doxysubsubsection{\texorpdfstring{allOffers}{allOffers}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_library_1_1_offer}{Offer}}$>$ Library.\+Offer\+Controller.\+all\+Offers = new List$<$\mbox{\hyperlink{class_library_1_1_offer}{Offer}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Lista que contiene todas las ofertas creadas 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em \mbox{\hyperlink{class_library_1_1_offer}{Offer}}} & Ofertas para guardar en la lista\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+Lista de ofertas
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_library_1_1_offer_controller_a5b7ac4f1338a805836034a42e166f18e}\label{class_library_1_1_offer_controller_a5b7ac4f1338a805836034a42e166f18e}} 
+\index{Library.OfferController@{Library.OfferController}!idCounter@{idCounter}}
+\index{idCounter@{idCounter}!Library.OfferController@{Library.OfferController}}
+\doxysubsubsection{\texorpdfstring{idCounter}{idCounter}}
+{\footnotesize\ttfamily int Library.\+Offer\+Controller.\+id\+Counter = 1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Contador para asignarles un ID a las ofertas 
+
+\mbox{\Hypertarget{class_library_1_1_offer_controller_a63788db7d4b1d44b4b67b0eb6880de1d}\label{class_library_1_1_offer_controller_a63788db7d4b1d44b4b67b0eb6880de1d}} 
+\index{Library.OfferController@{Library.OfferController}!s@{s}}
+\index{s@{s}!Library.OfferController@{Library.OfferController}}
+\doxysubsubsection{\texorpdfstring{s}{s}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_library_1_1_offer_controller}{Offer\+Controller}} Library.\+Offer\+Controller.\+s\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Library/\+Offers/\mbox{\hyperlink{_offer_controller_8cs}{Offer\+Controller.\+cs}}\end{DoxyCompactItemize}
