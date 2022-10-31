@@ -13,9 +13,11 @@ public class Employer : User{
         return result;
     }
 
-    public void Hire(Offer offer)
+    public void Hire(int id)
     {
-        Employer thisEmployer = new Employer(this.name, this.phoneNum, this.address, 1);
-        Work WorkHired = new Work(offer, thisEmployer, 1);
+
+        //UserController.GetInstance().RegisterEmployer(this.name, this.phoneNum, this.address);
+        WorkController.GetInstance().AddWork(OfferController.GetInstance().GetOffer(id), this);
+
     }
 }

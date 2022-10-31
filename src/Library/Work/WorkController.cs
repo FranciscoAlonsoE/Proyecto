@@ -2,6 +2,16 @@ namespace Library;
 
 public sealed class WorkController{
 
+    public static WorkController s;
+        private WorkController (){}
+        public static WorkController GetInstance()
+        {
+            if (s==null)
+            {
+                s = new WorkController();
+            }
+            return s;
+        }
   
     private List<Work> workList = new List<Work>();
     private int id;
@@ -10,8 +20,8 @@ public sealed class WorkController{
         return this.id;
     }
 
-    public void AddWork(Offer myOffer, Worker myWorker){
-        Work myWork = new Work(myOffer, myWorker, workList.Count()+1);
+    public void AddWork(Offer myOffer, Employer myEmployer){
+        Work myWork = new Work(myOffer, myEmployer, workList.Count()+1);
 
         this.workList.Add(myWork);
     }
@@ -28,7 +38,7 @@ public sealed class WorkController{
         List<Work> workerList = new List<Work>();
         foreach (var work in this.workList)
         {
-            if(work.getWorker().getId() == myId){
+            if(work.GetEmployer().getId() == myId){
                 workerList.Add(work);
             }
         }

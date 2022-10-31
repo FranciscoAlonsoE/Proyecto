@@ -25,8 +25,12 @@ public class Admin : User
 /// <param name="name">nombre del usuario</param>
 /// <param name="phoneNum">numero del usuario</param>
 /// <param name="address">correo del usuario</param>
-    public void AddUser(string name, string phoneNum, string address){
-        UserController.GetInstance().Register(name, phoneNum, address);     
+    public void AddEmployer(string name, string phoneNum, string address){
+        UserController.GetInstance().RegisterEmployer(name, phoneNum, address);     
+    }
+
+    public void AddWorker(string name, string phoneNum, string address){
+        UserController.GetInstance().RegisterWorker(name, phoneNum, address);     
     }
 
 
