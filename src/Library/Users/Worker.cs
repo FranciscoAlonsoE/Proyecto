@@ -5,9 +5,8 @@ public class Worker : User {
     : base(name, phoneNum, address, Id)
     {    
     }
-    public void MakeOffer(Category category, int price, string description){
-       Worker thisWorker = new Worker(this.name, this.phoneNum, this.address); 
-       Offer newOffer = new Offer(1, category, price, description, thisWorker);
+    public void MakeOffer(Category category, double price, string description){
+       OfferController.GetInstance().AddOffer(category, price, description, this);
     }
 }
 

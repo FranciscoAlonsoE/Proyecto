@@ -22,8 +22,22 @@ public class UserController {
     /// <param name="phoneNum">numero del usuario</param>
     /// <param name="address">email del usuario</param>
     /// <param name="idCounter">id del usuario</param>
-    public void Register(string name, string phoneNum, string address){
-     User newUser= new User(name, phoneNum, address, idCounter);
+    public void RegisterEmployer(string name, string phoneNum, string address){
+     Employer newUser= new Employer(name, phoneNum, address, idCounter);
+            if (!allUsers.Contains(newUser))
+            {
+                allUsers.Add(newUser);
+                idCounter += 1;
+            }
+            else
+            {
+                newUser = null;
+            }
+     allUsers.Add(newUser);
+    }
+
+    public void RegisterWorker(string name, string phoneNum, string address){
+     Worker newUser= new Worker(name, phoneNum, address, idCounter);
             if (!allUsers.Contains(newUser))
             {
                 allUsers.Add(newUser);
