@@ -15,7 +15,7 @@ public class Employer : User{
 
     public void Hire(Offer offer)
     {
-        Employer thisEmployer = new Employer(this.name, this.phoneNum, this.address);
+        Employer thisEmployer = new Employer(this.name, this.phoneNum, this.address, 1);
         Work WorkHired = new Work(offer, thisEmployer, 1);
     }
 }
