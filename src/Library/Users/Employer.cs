@@ -4,6 +4,7 @@ public class Employer : User{
     public Employer(string name, string phoneNum, string address, int Id)
         : base (name, phoneNum, address, Id)
         {
+            
         }
 
     public List<Offer> BrowseOffers()
@@ -14,5 +15,7 @@ public class Employer : User{
 
     public void Hire(Offer offer)
     {
+        Employer thisEmployer = new Employer(this.name, this.phoneNum, this.address);
+        Work WorkHired = new Work(offer, thisEmployer, 1);
     }
 }

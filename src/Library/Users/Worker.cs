@@ -1,4 +1,3 @@
-using System;
 namespace Library {
 
 public class Worker : User {
@@ -6,9 +5,9 @@ public class Worker : User {
     : base(name, phoneNum, address, Id)
     {    
     }
-    public static void MakeOffer(string category, int price, int description){
-       
-        
+    public void MakeOffer(Category category, int price, string description){
+       Worker thisWorker = new Worker(this.name, this.phoneNum, this.address); 
+       Offer newOffer = new Offer(1, category, price, description, thisWorker);
     }
 }
 
