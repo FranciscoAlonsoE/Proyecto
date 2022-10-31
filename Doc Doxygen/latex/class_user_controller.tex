@@ -1,0 +1,147 @@
+\hypertarget{class_user_controller}{}\doxysection{User\+Controller Class Reference}
+\label{class_user_controller}\index{UserController@{UserController}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_user_controller_a25103b6e02c98230b4873cbf6d5a2972}{Register\+Employer}} (string name, string phone\+Num, string address)
+\begin{DoxyCompactList}\small\item\em Registra un usuario \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_controller_a3e229f5be649963499f7f274f0fcd574}{Register\+Worker}} (string name, string phone\+Num, string address)
+\item 
+void \mbox{\hyperlink{class_user_controller_a2e821357cd152b3589cb9cfa602afeb2}{Remove\+User}} (int User\+Id)
+\begin{DoxyCompactList}\small\item\em Remover usuario \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_user}{User}} $>$ \mbox{\hyperlink{class_user_controller_a6de559cf0570c4ff1d5199a7b4991804}{Get\+User\+List}} ()
+\item 
+\mbox{\hyperlink{class_user}{User}} \mbox{\hyperlink{class_user_controller_a57bde7d68a39f88c658c7ea597ec9cbf}{Get\+User}} (int User\+Id)
+\begin{DoxyCompactList}\small\item\em Retorna el Usuario \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_user_controller}{User\+Controller}} \mbox{\hyperlink{class_user_controller_af146de9f97eea5b31ab2d1f3eb8b0259}{Get\+Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_user_controller}{User\+Controller}} \mbox{\hyperlink{class_user_controller_aa6f0b75bbdd97c43ade21f57c1f1738a}{s}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_user_controller_ac997c5b9b1bddee15d137d0158224026}{User\+Controller}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_user}{User}} $>$ \mbox{\hyperlink{class_user_controller_ae927ecffcd9fbbb05042fe94d22832cd}{all\+Users}} = new List$<$\mbox{\hyperlink{class_user}{User}}$>$()
+\item 
+int \mbox{\hyperlink{class_user_controller_a431cb393fd68167098cf8f27267757e7}{id\+Counter}} = 1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_user_controller_ac997c5b9b1bddee15d137d0158224026}\label{class_user_controller_ac997c5b9b1bddee15d137d0158224026}} 
+\index{UserController@{UserController}!UserController@{UserController}}
+\index{UserController@{UserController}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{UserController()}{UserController()}}
+{\footnotesize\ttfamily User\+Controller.\+User\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_user_controller_af146de9f97eea5b31ab2d1f3eb8b0259}\label{class_user_controller_af146de9f97eea5b31ab2d1f3eb8b0259}} 
+\index{UserController@{UserController}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_user_controller}{User\+Controller}} User\+Controller.\+Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_user_controller_a57bde7d68a39f88c658c7ea597ec9cbf}\label{class_user_controller_a57bde7d68a39f88c658c7ea597ec9cbf}} 
+\index{UserController@{UserController}!GetUser@{GetUser}}
+\index{GetUser@{GetUser}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{GetUser()}{GetUser()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_user}{User}} User\+Controller.\+Get\+User (\begin{DoxyParamCaption}\item[{int}]{User\+Id }\end{DoxyParamCaption})}
+
+
+
+Retorna el Usuario 
+
+
+\begin{DoxyParams}{Parameters}
+{\em User\+Id} & Se ingresa el id del usuario que se desea buscar\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_user_controller_a6de559cf0570c4ff1d5199a7b4991804}\label{class_user_controller_a6de559cf0570c4ff1d5199a7b4991804}} 
+\index{UserController@{UserController}!GetUserList@{GetUserList}}
+\index{GetUserList@{GetUserList}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{GetUserList()}{GetUserList()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_user}{User}} $>$ User\+Controller.\+Get\+User\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_user_controller_a25103b6e02c98230b4873cbf6d5a2972}\label{class_user_controller_a25103b6e02c98230b4873cbf6d5a2972}} 
+\index{UserController@{UserController}!RegisterEmployer@{RegisterEmployer}}
+\index{RegisterEmployer@{RegisterEmployer}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{RegisterEmployer()}{RegisterEmployer()}}
+{\footnotesize\ttfamily void User\+Controller.\+Register\+Employer (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{string}]{phone\+Num,  }\item[{string}]{address }\end{DoxyParamCaption})}
+
+
+
+Registra un usuario 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & nombre del usuario\\
+\hline
+{\em phone\+Num} & numero del usuario\\
+\hline
+{\em address} & email del usuario\\
+\hline
+{\em id\+Counter} & id del usuario\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_user_controller_a3e229f5be649963499f7f274f0fcd574}\label{class_user_controller_a3e229f5be649963499f7f274f0fcd574}} 
+\index{UserController@{UserController}!RegisterWorker@{RegisterWorker}}
+\index{RegisterWorker@{RegisterWorker}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{RegisterWorker()}{RegisterWorker()}}
+{\footnotesize\ttfamily void User\+Controller.\+Register\+Worker (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{string}]{phone\+Num,  }\item[{string}]{address }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_user_controller_a2e821357cd152b3589cb9cfa602afeb2}\label{class_user_controller_a2e821357cd152b3589cb9cfa602afeb2}} 
+\index{UserController@{UserController}!RemoveUser@{RemoveUser}}
+\index{RemoveUser@{RemoveUser}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{RemoveUser()}{RemoveUser()}}
+{\footnotesize\ttfamily void User\+Controller.\+Remove\+User (\begin{DoxyParamCaption}\item[{int}]{User\+Id }\end{DoxyParamCaption})}
+
+
+
+Remover usuario 
+
+
+\begin{DoxyParams}{Parameters}
+{\em User\+Id} & Recibe el id del usuario que se eliminara\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_user_controller_ae927ecffcd9fbbb05042fe94d22832cd}\label{class_user_controller_ae927ecffcd9fbbb05042fe94d22832cd}} 
+\index{UserController@{UserController}!allUsers@{allUsers}}
+\index{allUsers@{allUsers}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{allUsers}{allUsers}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_user}{User}}$>$ User\+Controller.\+all\+Users = new List$<$\mbox{\hyperlink{class_user}{User}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_user_controller_a431cb393fd68167098cf8f27267757e7}\label{class_user_controller_a431cb393fd68167098cf8f27267757e7}} 
+\index{UserController@{UserController}!idCounter@{idCounter}}
+\index{idCounter@{idCounter}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{idCounter}{idCounter}}
+{\footnotesize\ttfamily int User\+Controller.\+id\+Counter = 1\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_user_controller_aa6f0b75bbdd97c43ade21f57c1f1738a}\label{class_user_controller_aa6f0b75bbdd97c43ade21f57c1f1738a}} 
+\index{UserController@{UserController}!s@{s}}
+\index{s@{s}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{s}{s}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_user_controller}{User\+Controller}} User\+Controller.\+s\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Library/\+Users/\mbox{\hyperlink{_user_controller_8cs}{User\+Controller.\+cs}}\end{DoxyCompactItemize}

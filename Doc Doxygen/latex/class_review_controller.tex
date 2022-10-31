@@ -1,0 +1,197 @@
+\hypertarget{class_review_controller}{}\doxysection{Review\+Controller Class Reference}
+\label{class_review_controller}\index{ReviewController@{ReviewController}}
+
+
+Clase \mbox{\hyperlink{class_review_controller}{Review\+Controller}} encargada de almacenar las reviews, eliminarlas y filtrarlas.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_review_controller_aaa50755599385c3cedb3e23dc03e4fa2}{Make\+Review}} (\mbox{\hyperlink{class_user}{User}} from, \mbox{\hyperlink{class_user}{User}} to, int stars, string comment)
+\begin{DoxyCompactList}\small\item\em Crear una review. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_review_controller_afc937b9a95284782e7c9e1d71ee9e53d}{Remove\+Review}} (int id)
+\begin{DoxyCompactList}\small\item\em Remover una review por ID. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_review}{Review}} $>$ \mbox{\hyperlink{class_review_controller_aac04019124693ed8f05c4b2131870d39}{Review\+List}} ()
+\begin{DoxyCompactList}\small\item\em Accede a la lista de reviews. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_review}{Review}} $>$ \mbox{\hyperlink{class_review_controller_a93aa0826e4bbf33f594dd53ad61f677d}{Filter\+By\+Plublisher}} (\mbox{\hyperlink{class_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Filtar las revies en base al usuario que las hizo. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_review}{Review}} $>$ \mbox{\hyperlink{class_review_controller_a25807b6d78a6818162a3094c78a1ac18}{Filter\+By\+Rated\+User}} (\mbox{\hyperlink{class_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Filtra las reviews en base al usuario calificado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_review_controller}{Review\+Controller}} \mbox{\hyperlink{class_review_controller_a1f43569458923216fa4ee2218b364fb0}{Get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Asegura que se cree una sola instancia de \mbox{\hyperlink{class_review_controller}{Review\+Controller}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_review_controller}{Review\+Controller}} \mbox{\hyperlink{class_review_controller_af8ed5e2b902b3f6f4372fb263fd3339a}{s}}
+\begin{DoxyCompactList}\small\item\em Instancia unica del \mbox{\hyperlink{class_review_controller}{Review\+Controller}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_review}{Review}} $>$ \mbox{\hyperlink{class_review_controller_a709e2c1acd74aae53d0f446e28ea4429}{review\+List}} = new List$<$\mbox{\hyperlink{class_review}{Review}}$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Lista con todas las reviews existentes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_review_controller_ab265ca1e53ec769dad4403db883084d7}{Review\+Controller}} ()
+\begin{DoxyCompactList}\small\item\em Constructor privado del \mbox{\hyperlink{class_review}{Review}} Controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase \mbox{\hyperlink{class_review_controller}{Review\+Controller}} encargada de almacenar las reviews, eliminarlas y filtrarlas. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_review_controller_ab265ca1e53ec769dad4403db883084d7}\label{class_review_controller_ab265ca1e53ec769dad4403db883084d7}} 
+\index{ReviewController@{ReviewController}!ReviewController@{ReviewController}}
+\index{ReviewController@{ReviewController}!ReviewController@{ReviewController}}
+\doxysubsubsection{\texorpdfstring{ReviewController()}{ReviewController()}}
+{\footnotesize\ttfamily Review\+Controller.\+Review\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Constructor privado del \mbox{\hyperlink{class_review}{Review}} Controller. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_review_controller_a93aa0826e4bbf33f594dd53ad61f677d}\label{class_review_controller_a93aa0826e4bbf33f594dd53ad61f677d}} 
+\index{ReviewController@{ReviewController}!FilterByPlublisher@{FilterByPlublisher}}
+\index{FilterByPlublisher@{FilterByPlublisher}!ReviewController@{ReviewController}}
+\doxysubsubsection{\texorpdfstring{FilterByPlublisher()}{FilterByPlublisher()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_review}{Review}} $>$ Review\+Controller.\+Filter\+By\+Plublisher (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_user}{User}}}]{user }\end{DoxyParamCaption})}
+
+
+
+Filtar las revies en base al usuario que las hizo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & Usuario que hizo las reviews. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lista con las reviews hechas por el usuario. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_review_controller_a25807b6d78a6818162a3094c78a1ac18}\label{class_review_controller_a25807b6d78a6818162a3094c78a1ac18}} 
+\index{ReviewController@{ReviewController}!FilterByRatedUser@{FilterByRatedUser}}
+\index{FilterByRatedUser@{FilterByRatedUser}!ReviewController@{ReviewController}}
+\doxysubsubsection{\texorpdfstring{FilterByRatedUser()}{FilterByRatedUser()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_review}{Review}} $>$ Review\+Controller.\+Filter\+By\+Rated\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_user}{User}}}]{user }\end{DoxyParamCaption})}
+
+
+
+Filtra las reviews en base al usuario calificado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & Usuario calificado en las reviews. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lista de reviews hechas para el usuario. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_review_controller_a1f43569458923216fa4ee2218b364fb0}\label{class_review_controller_a1f43569458923216fa4ee2218b364fb0}} 
+\index{ReviewController@{ReviewController}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!ReviewController@{ReviewController}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_review_controller}{Review\+Controller}} Review\+Controller.\+Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Asegura que se cree una sola instancia de \mbox{\hyperlink{class_review_controller}{Review\+Controller}}. 
+
+\begin{DoxyReturn}{Returns}
+Instancia única de \mbox{\hyperlink{class_review_controller}{Review\+Controller}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_review_controller_aaa50755599385c3cedb3e23dc03e4fa2}\label{class_review_controller_aaa50755599385c3cedb3e23dc03e4fa2}} 
+\index{ReviewController@{ReviewController}!MakeReview@{MakeReview}}
+\index{MakeReview@{MakeReview}!ReviewController@{ReviewController}}
+\doxysubsubsection{\texorpdfstring{MakeReview()}{MakeReview()}}
+{\footnotesize\ttfamily void Review\+Controller.\+Make\+Review (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_user}{User}}}]{from,  }\item[{\mbox{\hyperlink{class_user}{User}}}]{to,  }\item[{int}]{stars,  }\item[{string}]{comment }\end{DoxyParamCaption})}
+
+
+
+Crear una review. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & Usuario que hace la review. \\
+\hline
+{\em to} & Usuario calificado en la review. \\
+\hline
+{\em stars} & Estrellas dadas al usuario. \\
+\hline
+{\em comment} & Comentario de la review. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_review_controller_afc937b9a95284782e7c9e1d71ee9e53d}\label{class_review_controller_afc937b9a95284782e7c9e1d71ee9e53d}} 
+\index{ReviewController@{ReviewController}!RemoveReview@{RemoveReview}}
+\index{RemoveReview@{RemoveReview}!ReviewController@{ReviewController}}
+\doxysubsubsection{\texorpdfstring{RemoveReview()}{RemoveReview()}}
+{\footnotesize\ttfamily void Review\+Controller.\+Remove\+Review (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Remover una review por ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & ID de la review que se quiere eliminar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_review_controller_aac04019124693ed8f05c4b2131870d39}\label{class_review_controller_aac04019124693ed8f05c4b2131870d39}} 
+\index{ReviewController@{ReviewController}!ReviewList@{ReviewList}}
+\index{ReviewList@{ReviewList}!ReviewController@{ReviewController}}
+\doxysubsubsection{\texorpdfstring{ReviewList()}{ReviewList()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_review}{Review}} $>$ Review\+Controller.\+Review\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Accede a la lista de reviews. 
+
+\begin{DoxyReturn}{Returns}
+Lista de todas las reviews almacenadas 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_review_controller_af8ed5e2b902b3f6f4372fb263fd3339a}\label{class_review_controller_af8ed5e2b902b3f6f4372fb263fd3339a}} 
+\index{ReviewController@{ReviewController}!s@{s}}
+\index{s@{s}!ReviewController@{ReviewController}}
+\doxysubsubsection{\texorpdfstring{s}{s}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_review_controller}{Review\+Controller}} Review\+Controller.\+s\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Instancia unica del \mbox{\hyperlink{class_review_controller}{Review\+Controller}}. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_review_controller_a709e2c1acd74aae53d0f446e28ea4429}\label{class_review_controller_a709e2c1acd74aae53d0f446e28ea4429}} 
+\index{ReviewController@{ReviewController}!reviewList@{reviewList}}
+\index{reviewList@{reviewList}!ReviewController@{ReviewController}}
+\doxysubsubsection{\texorpdfstring{reviewList}{reviewList}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_review}{Review}}$>$ Review\+Controller.\+review\+List = new List$<$\mbox{\hyperlink{class_review}{Review}}$>$()\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}, {\ttfamily [private]}}
+
+
+
+Lista con todas las reviews existentes. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em \mbox{\hyperlink{class_review}{Review}}} & Objeto \mbox{\hyperlink{class_review}{Review}} almacenado en la lista. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+~\newline
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Library/\+Reviews/\mbox{\hyperlink{_review_controller_8cs}{Review\+Controller.\+cs}}\end{DoxyCompactItemize}
