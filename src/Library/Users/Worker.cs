@@ -5,8 +5,10 @@ public class Worker : User {
     : base(name, phoneNum, address, Id)
     {    
     }
+
     public void MakeOffer(Category category, double price, string description){
        OfferController.GetInstance().AddOffer(category, price, description, this);
+
     }
 }
 

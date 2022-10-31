@@ -15,7 +15,9 @@ public class Employer : User{
 
     public void Hire(int id)
     {
+
         //UserController.GetInstance().RegisterEmployer(this.name, this.phoneNum, this.address);
         WorkController.GetInstance().AddWork(OfferController.GetInstance().GetOffer(id), this);
+
     }
 }
